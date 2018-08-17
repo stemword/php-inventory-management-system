@@ -70,6 +70,13 @@
 				    </div>
 	        </div> <!-- /form-group-->	        	 
 
+	        <div class="form-group">
+	        	<label for="uemail" class="col-sm-3 control-label">Email: </label>
+	        	
+				    <div class="col-sm-8">
+				      <input type="email" class="form-control" id="uemail" placeholder="Email" name="uemail" autocomplete="off">
+				    </div>
+	        </div> <!-- /form-group-->	 
 	        	         	        
 	      </div> <!-- /modal-body -->
 	      
