@@ -8,6 +8,6 @@ session_unset();
 // destroy the session 
 session_destroy(); 
 
-header('location: http://localhost/inventory-management-system/index.php');
+header('location:'.$store_url);	
 
 ?>

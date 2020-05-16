@@ -7,8 +7,12 @@ Report management
 User wise sell report
 
 # Requirement
-Need to change
-core.php, logout.php, index.php
+
 ```
-header('location: http://localhost/<foldername>/index.php');	
+Need to change
+store_url in db_connect.php
+
+Login Credentials
+Id : admin
+password : admin
 ```
