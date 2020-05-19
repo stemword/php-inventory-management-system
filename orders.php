@@ -96,7 +96,7 @@ if($_GET['o'] == 'add') {
 			  	<tbody>
 			  		<?php
 			  		$arrayNumber = 0;
-			  		for($x = 1; $x < 4; $x++) { ?>
+			  		for($x = 1; $x < 2; $x++) { ?>
 			  			<tr id="row<?php echo $x; ?>" class="<?php echo $arrayNumber; ?>">			  				
 			  				<td style="margin-left:20px;">
 			  					<div class="form-group">
