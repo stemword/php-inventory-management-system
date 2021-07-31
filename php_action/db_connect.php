@@ -1,10 +1,10 @@
 <?php 	
 
-$localhost = "localhost";
-$username = "root";
-$password = "root";
+$localhost = "store.cseraeacxjps.ap-south-1.rds.amazonaws.com";
+$username = "admin";
+$password = "store123";
 $dbname = "store";
-$store_url = "http://localhost/php-inventory-management-system/";
+$store_url = "http://3.109.129.151/";
 // db connection
 $connect = new mysqli($localhost, $username, $password, $dbname);
 // check connection
