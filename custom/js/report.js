@@ -46,8 +46,8 @@ $(document).ready(function() {
 	        mywindow.document.close(); // necessary for IE >= 10
 	        mywindow.focus(); // necessary for IE >= 10
 
-	        mywindow.print();
-	        mywindow.close();
+	        setTimeout(function(){ mywindow.print(); mywindow.close();}, 2000);
+
 				} // /success
 			});	// /ajax
 
