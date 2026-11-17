@@ -23,14 +23,18 @@ if($_POST) {
 			$errors[] = "Password is required";
 		}
 	} else {
-		$sql = "SELECT * FROM users WHERE username = '$username'";
-		$result = $connect->query($sql);
+		$stmt = $connect->prepare("SELECT * FROM users WHERE username = ?");
+		$stmt->bind_param("s", $username);
+		$stmt->execute();
+		$result = $stmt->get_result();
 
 		if($result->num_rows == 1) {
 			$password = md5($password);
 			// exists
-			$mainSql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-			$mainResult = $connect->query($mainSql);
+			$mainStmt = $connect->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+			$mainStmt->bind_param("ss", $username, $password);
+			$mainStmt->execute();
+			$mainResult = $mainStmt->get_result();
 
 			if($mainResult->num_rows == 1) {
 				$value = $mainResult->fetch_assoc();
